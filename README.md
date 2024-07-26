@@ -114,9 +114,8 @@ The row of x coordinates is sorted from smallest (closest to the origin or print
 bubbleSort(row.coordXArray, 10);
 ```
 
-## Final Overview of the X Axis and Y Axis PrintHead and Conveyer Movement Routine (Flow Chart)
+## Overview of Pastry detection algorithm (Flow Chart)
 
-![image](https://github.com/user-attachments/assets/07cf07c0-ebe3-405b-bb9b-d552e8d4f683)
 
 
 
