@@ -17,13 +17,15 @@ The software integrates all of the components, with the keypad being the control
 The `Pixy Camera` inteprets the conveyer belt based on image below. These objects are pastries, with `colour signature` boxes on them. ***Based on the axes, towards right x value increases. As you go
 down, y value increases.***
 
-![image](https://github.com/user-attachments/assets/bd544ce3-9286-47e4-9e27-31b1b18a1eff)
+![image](https://github.com/user-attachments/assets/aed40e77-0457-40ac-9778-4c36f20d2207)
+
 
 
 
 The pixy camera has two lines to create a `row` of objects along the `X-axis`.
 
-![image](https://github.com/user-attachments/assets/28489d34-fe56-4523-99c5-2de9eea9a570)
+![image](https://github.com/user-attachments/assets/625fcfe4-b290-42a9-aa89-1424a91e577e)
+
 
 ### Row Object
 
@@ -67,11 +69,13 @@ The **second condition** dictates that the pastry selected as the reference for 
 
 The images below descibes cases where `Row` is created based on conditions.
 
-![image](https://github.com/user-attachments/assets/3d105be6-bf91-4f05-8790-1a99ae46733b)
+![image](https://github.com/user-attachments/assets/5df17082-ff4e-45d8-a77f-4613ccdc6bd4)
+
 
 The image above describes a row being created because it **meets the two conditions mentioned**.
 
-![image](https://github.com/user-attachments/assets/b0bcb62c-8961-493a-af73-fce657c0e12b)
+![image](https://github.com/user-attachments/assets/787e62d6-583e-4ee2-aa34-df8b97222f40)
+
 
 The image above shows that **no row is created** because it **does not meet the second condition**.
 
@@ -97,7 +101,8 @@ describes this pastry selection for the `Row` object.
 
 The following image describes that two crossaints are selected because their centrepoints along the y axis is between the `Row.coordRow_Y` and `Row.coordRow_Y - 10`.
 
-![image](https://github.com/user-attachments/assets/046f05f3-0cde-4423-9ccf-0cb6a21168b1)
+![image](https://github.com/user-attachments/assets/1a854c1c-a923-4bcc-acf2-82e6888d42e6)
+
 
 Hence, a row is created with the `Row.coordXArray[]` **filled with the centrepoints of pastries along the x axis.**
 
@@ -128,7 +133,7 @@ The `xAxisMovement((row.coordXArray[i]- datum) * PIXY_RATIO)` moves the printhea
 
 The diagram below illustrates this function.
 
-![image](https://github.com/user-attachments/assets/b557da16-8e1d-4f7b-ba70-d70d0010371d)
+![image](https://github.com/user-attachments/assets/7c73d173-be63-474d-b112-0becbcb0d889)
 
 
 
@@ -136,21 +141,21 @@ The diagram below illustrates this function.
 
 Once arrived at the location within an offset from the centrepoint of the pastry, the program commences `iniDelay()`. `iniDelay()` covers the distance gap EveBot is required to roll before actual printing commences. The distance gap was measured from the EveBot ruler illustrated below.
 
-![image](https://github.com/user-attachments/assets/09bf2aea-fd86-43e3-bcc7-4227ca1040fb)
+![image](https://github.com/user-attachments/assets/a65f1a53-ebe0-48de-bbd9-2b8eccbe0d74)
 
 
 + `xAxisMovement(PRINTSIZE)`
 
 The printhead then moves according to the PRINTSIZE specified by the user in via the **keypad interface.** The default value for `PRINTSIZE` is 43. 
 
-![image](https://github.com/user-attachments/assets/75560c5b-b7f5-457a-84ca-2ebc1df672f0)
+![image](https://github.com/user-attachments/assets/ce2e664e-ba24-44e2-97bb-c1ae75bb352b)
 
 
 + `backToHomePosition()`
 
 This function moves the printhead back to the HOME position i.e. until it hits the limit switch at HOME. Within this function, the program sends **HIGH** and **LOW** pulses until the limit switch toggles. The following diagram illustrates this:
 
-![image](https://github.com/user-attachments/assets/65b69bdd-a2d8-498a-bf1a-959c94c0d5e4)
+![image](https://github.com/user-attachments/assets/93310df3-40e2-4cf7-aeac-56de80c900d2)
 
 
 + `pressEveBot()`
@@ -256,8 +261,10 @@ void moveZAxisDown(){
 
 ## Final Overview of the X Axis and Y Axis PrintHead and Conveyer Movement Routine (Flow Chart)
 
-![image](https://github.com/user-attachments/assets/0ab22698-b60b-439c-8399-0b588207aeb3)
+![image](https://github.com/user-attachments/assets/07cf07c0-ebe3-405b-bb9b-d552e8d4f683)
 
 
-![image](https://github.com/user-attachments/assets/fa0682cc-7a3a-4d1d-9bf0-75fd7f4fd938)
+
+![image](https://github.com/user-attachments/assets/f40bb396-51b3-4330-b3ed-b9339d621682)
+
 
