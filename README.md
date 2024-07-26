@@ -1,4 +1,4 @@
-# "E.A.S.Y (EveBot Automated Solution, Why?)" Software Documentation
+# "(EveBot Automated Solution, Why?)" Software Documentation
 
 
 ## "(EveBot Automated Solution, Why?)" Description
