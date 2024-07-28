@@ -32,7 +32,7 @@ The pixy camera has two lines to create a `row` of objects along the `X-axis`.
 
 To guide X and Y Axis to move and print on which pastries, the program creates a `Row`, consist of `x coordinates` of pastries along the same row, a y coordinate `coordRow_Y` that serves as **a reference point to bring the `Row` to the `PRINTLINE`** and the number of pastries/objects in the `Row`.
 
-```
+```c
 typedef struct __row{
 	uint16_t coordRow_Y;
 	uint16_t numberOfRowObjects;
@@ -44,7 +44,7 @@ typedef struct __row{
 
 The bottommost pastry i.e. pastry closest to the `PRINTLINE` is the reference point for a `Row`.
 
-```
+```c
 	for(int j = 0; j<numberOfBlocks; ++j)
 	{
 		//find the lowest centre point of an object within a "row" AND ONLY IF
@@ -85,7 +85,7 @@ Once `Row` reference point is selected i.e. closest to `PRINT_LINE`, the program
 Taking `Row.coordRow_Y`, which was set as a reference point along the Y axis i.e. conveyer, the program looks for pastries with centre point within `Row.coordRow_Y` and `Row.coordRow_Y - 10`. The snippet
 describes this pastry selection for the `Row` object.
 
-```
+```c
 	for(int i = 0; i< numberOfBlocks; ++i)//loop for the no objects
 	{
 		//since the lowest centrepoint is the reference for the row,
@@ -109,7 +109,7 @@ Hence, a row is created with the `Row.coordXArray[]` **filled with the centrepoi
 
 The row of x coordinates is sorted from smallest (closest to the origin or printhead) to the largest. This ensures that the printhead goes in proper sequence from left to right.
 
-```
+```c
 bubbleSort(row.coordXArray, 10);
 ```
 
